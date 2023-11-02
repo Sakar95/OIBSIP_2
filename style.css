@@ -1,0 +1,655 @@
+/* font-family: 'Poppins', sans-serif; */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+
+.navbar {
+    position: fixed;
+    top: 10px;
+    left: 1.5vw;
+    border-radius: 9px;
+    width: 97%;
+    z-index: 3;
+}
+
+.navbar-bg{
+     background-color:  darkorange;
+}
+
+.navbar .logo {
+    color: darkorange;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 10px;
+    font-size: 30px;
+    font-weight: 800;
+    text-shadow:1px 1px black;
+}
+
+.navbar .logo span{
+    color: white;
+}
+
+
+.navbar .nav_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 80px;
+}
+
+.menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.menu li a {
+    color: white;
+    margin-left: 30px;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    padding: 0 5px;
+    border-radius: 5px;
+
+}
+
+.menu li a:hover {
+    color: white;
+    background-color:black;
+    /* border: 1px solid darkorange; */
+}
+
+.menuS{
+    background-color: black;
+}
+
+
+.hamb {
+    display: none;
+    cursor: pointer;
+}
+
+.hb {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: darkorange;
+}
+
+#hb1{
+   width: 15px;
+}
+
+#hb3{
+    width: 15px;
+    margin-left: 14px;
+}
+
+
+
+/* cross hamburger */
+.hb1rotate{
+    transform:rotate(30deg);
+    transition-duration: 0.5s;
+}
+
+.hb2rotate{
+    transform:rotate(120deg);
+    transition-duration: 0.5s;
+    
+}
+
+.hb3rotate{
+    transform:rotate(30deg);
+    transition-duration: 0.5s;
+
+}
+
+/* vertical menu bar */
+.menuVt{
+    width:200px;
+    height:855px;
+    display: inline-block;
+    position: fixed ;
+    right: 0px;
+    width:200px;
+    background-color: #2d2d2ddb;
+    display: none;
+    z-index: 2;
+    color: wheat;
+    
+}
+
+.menuVt ul{
+    margin: 120px 0 0 70px;
+    padding: 1px;
+    list-style: none;
+    
+}
+.menuVt li{
+    padding-bottom: 25px;
+
+}
+.menuVt li a{
+    
+    color: white;
+    font-size: 23px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease;
+    /* background-color: black; */
+    
+}
+.appearance{
+    
+    display: inline-block;
+    transition:all;
+    animation-name: menuAnimate;
+    /* animation-name: menuAnimate2; */
+    animation-duration: 0.5s;
+    
+}
+
+@keyframes menuAnimate{
+    from{
+        width: 0px;
+
+    }
+    to{
+        width: 200px;
+    }
+}
+
+
+.appear{
+    right: 300px;
+}
+
+
+
+
+
+/* Home section designing */
+
+#home {
+    display: flex;
+    background: url(./images/bck1.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    /* z-index: 1; */
+
+}
+
+.homecontent {
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin-left:17vw ;
+  
+    z-index: 0;
+    text-shadow: 2px 2px black;
+
+
+}
+
+.text1 {
+    font-size: 2rem;
+    margin-bottom: -32px;
+    margin-left: 5px;
+}
+
+ .text2 {
+    font-size: 5rem;
+    transition: color 0.3s ease;
+    height: 6.5rem;
+}
+ .text2:hover {
+    color: darkorange;
+}
+
+ .text3 {
+    font-size: 2rem;
+    /* position: relative; */
+    margin-top: -10px;
+}
+
+.text3 span {
+    color: darkorange;
+    position: relative;
+    /* text-shadow: 1px 1px 1px white; */
+}
+
+
+
+
+
+.cv{
+    font-size: 20px;
+    bottom: 150px;
+    left: -64px;
+    transform: rotate(270deg);
+    position: fixed;
+    background-color: darkorange;
+    padding: 5px 10px;
+    border-radius:5px ;
+    transition: all 0.3s;
+}
+
+.cv h3{
+    color: white;
+}
+
+.cv:hover{
+    background-color: rgb(221, 122, 2);
+}
+
+
+/* responsive designing of home */
+
+
+@media only screen and (min-width:960px){
+    .menuVt{
+        display: none;
+    }
+}
+@media only screen and (max-width:960px) {
+    .navbar .nav_content {
+
+        padding: 0px 50px;
+    }
+    .hamb{
+        display: block;
+        z-index: 999;
+    }
+     
+    
+    .navbar .menu {
+        position: fixed;
+        background: #111;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: -100%;
+        text-align: center;
+        padding: 80px;
+
+    }
+
+    .menu li {
+        display: block;
+    }
+    .menu li a{
+        display: inline-block;
+        margin: 30px 0px;
+    }
+    
+
+}
+
+@media only screen and (max-width:800px){
+    .homecontent{
+        margin-left:10vw ;
+        /* background: #000; */
+    }
+}
+@media only screen and (max-width:700px){
+    .text1{
+        margin-bottom: -20px;
+    }
+    .text2{
+        font-size: 4rem;
+    }
+    .text3{
+        margin-top: -28px;
+    }
+}
+
+@media only screen and (max-width:550px){
+    .text1{
+        font-size: 1.5rem;
+        margin-bottom: -30px;
+    }
+    .text2{
+        font-size: 3rem;
+    }
+    .text3{
+        font-size: 1.5rem;
+        margin-top: -40px;
+        height: 55px;
+    }
+    .cv{
+        font-size: 12px;
+        left: -42px;
+    }
+}
+
+@media only screen and (max-width:400px){
+    #changeText{
+        display: block;
+        margin-top: -10px;
+    }
+}
+
+
+
+
+
+/* about styling */
+
+.title{
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2.5rem;
+    font-weight:500;
+    color: darkorange;
+    text-shadow: 1px 1px black;
+    /* text-shadow: 2px 2px black; */
+}
+
+.title span{
+    margin: -7px 10px 0;
+    margin-left: 10px;
+    color: black;
+    font-weight: 600;
+}
+
+#about{
+    background: #e7e7e791;
+    padding-top:30px ;
+}
+.about_content{
+    display: flex;
+    padding: .5rem 4rem;
+    
+}
+.about_image{
+    padding: 2.5rem 0 1rem;
+    
+}
+.about_image img{
+    width: 25rem;
+    /* box-shadow: 2px 2px 2px black; */
+    border-radius: 15px;
+}
+/* .about_image img:hover{
+    transform:scale(1.2);
+} */
+
+.about_text{
+    padding: 7rem 7rem;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-weight: 600;
+    
+}
+
+
+/* Skills section styling */
+
+.picture{
+    height: 150px;
+    width: 230px;
+    border-radius:12px ;
+    background-color:black ;
+    box-shadow:2px 2px 2px black ;
+}
+.picture:hover{
+    cursor:pointer;
+}
+
+#project-section{
+    background-color: grey;
+    padding-top: 30px;
+}
+.projects{
+    display: flex;
+    padding: 3rem;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+
+.allProject{
+    width: 260px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    height: 22.5rem;
+    background-color: white;
+    border-radius: 10px;
+    margin: 35px;
+    box-shadow: 2px 2px 5px black;
+    background-color: #505050;
+    transition: all  0.4s;
+    position: relative;
+
+}
+
+.allProject p{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-family: 'Poppins';
+    font-weight: 600;
+    color: darkorange;
+    text-shadow: 2px 2px 3px black;
+    padding-top: 10px;
+    position: relative;
+}
+
+.gitLink {
+    color: white;
+    /* background-color: darkorange; */
+    padding: 0 7px;
+    border-radius: 50%;
+    margin-top: 10px;
+    font-family: poppins;
+    /* box-shadow: 2px 2px 4px black; */
+    transition: all 0.3s;
+    position: absolute;
+    bottom: 10px ;
+    right: 30px;
+    font-size: 25px;
+    color: #111;
+}
+
+.gitLink:hover{
+    color: darkorange;
+}
+
+.allProject:hover{
+    transform: scale(1.1);
+    /* background-color: rgb(248, 174, 83); */
+    color: white;
+}
+
+
+
+.allProject span{
+    color: white;
+    font-family:poppins;
+    text-align: center;
+}
+
+.open-btn{
+    background: darkorange;
+    padding: 0 5px 2px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 15px;
+    left: 30px;
+    box-shadow: 2px 2px 2px black;
+}
+
+.open-btn:hover{
+    color: darkorange;
+    background-color: transparent;
+    border: 2px solid darkorange;
+}
+
+
+
+
+
+/* ****** responsive of about section *******/
+@media only screen and (max-width:1140px ) and  (min-width:1075px)
+{
+    .about_text{
+        padding: 5rem 7rem;
+    }
+}
+
+@media only screen and (max-width:1075px ) and (min-width:860px)
+{
+    .about_text{
+        padding: 3rem 2rem;
+    }
+}
+
+@media only screen and (max-width:860px)
+{
+    .about_content{
+        flex-direction: column;
+    }
+    .about_text{
+        padding: 0rem 2rem;
+    }
+    .about_image{
+        display: flex;
+        justify-content: center;
+        padding-top: 0.5rem 2rem ;
+    }
+    .title{
+        padding-top: 2.5rem;
+    }
+
+    .about_image img{
+        width: 40vw;
+    }
+
+    .allProject{
+        margin-bottom: 50px;
+    }
+    
+}
+
+@media only screen and (max-width:660px) {
+    .text2{
+        line-height: 80px;
+        margin: 14px 0px 0px 0px;
+    }
+
+    .about_text{
+        padding: 1rem 0rem;
+        font-size: 15px;
+    }
+
+    .about_content{
+        padding: 0.5rem 1rem;
+    }
+    .about_image img{
+        width: 50vw;
+    }
+    .navbar .nav_content {
+
+        padding: 0px 30;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .about {
+    margin: 5px;
+    padding: 20px 70px 0px 70px;
+    border: 5px ridge orangered;
+    /* background-color :#dcb6b6;
+    border-radius: 5px;
+}
+
+
+
+.about .heading {
+
+    margin: 10px 0px 0px 300px;
+}
+
+.about .title {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 60px;
+    display: inline-block;
+}
+
+.about .title1 {
+    color: orangered;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: 500px;
+    margin-left: 60px;
+    display: inline-block;
+}
+
+.about .about-content {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 10px 20px 10px 38px;
+}
+
+.about .columnLeft {
+
+    display: inline-block;
+}
+
+.about .columnLeft img {
+    height: 200px;
+    border-radius: 10px;
+}
+
+.about .columnright {
+    width: 500px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.about .columnright h1 {
+    font-weight: 700;
+    color: orangered;
+} */
